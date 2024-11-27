@@ -1,9 +1,10 @@
-CREATE DATABASE IF NOT EXIST "pizza_db"
+-- CREATE DATABASE  "pizza_db";
 
 -- Karte
 
+\c "pizza_db";
 
-CREATE TABLE "karte" (
+CREATE TABLE karte (
     id SERIAL PRIMARY KEY,             -- Automatisch inkrementierende eindeutige ID
     pizza VARCHAR(255) NOT NULL,       -- Name der Pizza (maximal 255 Zeichen)
     preis NUMERIC(10, 2) NOT NULL,     -- Preis der Pizza mit maximal 10 Stellen, 2 Nachkommastellen
