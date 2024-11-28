@@ -1,6 +1,5 @@
 import express from "express"
 import cors from "cors"
-import pool from "./db.js";
 import karteRoutes from "./routes/karte.js"
 import zutatenRoutes from "./routes/zutaten.js"
 import bestellungenRoutes from "./routes/bestellungen.js"
