@@ -24,9 +24,17 @@
         groups: docker
         append: true
 
-    - name: Start Nginx Container
+    - name: Start Pizza-Backend Container
       docker_container:
-        name: meinNginx-container
-        image: nginx
+        name: meinPizzaBackend
+        image: suheib96/pizza-backend
+        state: started
+
+    - name: Start Pizza-Frontend Container
+      docker_container:
+        name: meinPizzaFrontend
+        image: suheib96/pizza-frontend
+        ports:
+          - "80:80"
         state: started
     
